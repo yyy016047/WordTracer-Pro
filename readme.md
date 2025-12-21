@@ -1,6 +1,6 @@
 # WordTracer Pro
 
-WordTracer Pro是一个Chrome浏览器扩展，专为CS专业人士和学生设计，提供高效的单词翻译、本地词库查询和学习管理功能。
+WordTracer Pro是一个浏览器扩展，专为CS专业人士和学生设计，提供高效的单词翻译、本地词库查询和学习管理功能，支持Chrome和Edge浏览器。
 
 ## 功能特性
 
@@ -31,19 +31,14 @@ WordTracer Pro是一个Chrome浏览器扩展，专为CS专业人士和学生设�
 
 ## 安装方法
 
-### Chrome浏览器
 1. 下载或克隆本项目
-2. 打开Chrome浏览器，进入 `chrome://extensions/`
-3. 开启右上角的"开发者模式"
-4. 点击"加载已解压的扩展程序"
-5. 选择项目文件夹
-
-### Edge浏览器
-1. 下载或克隆本项目
-2. 打开Edge浏览器，进入 `edge://extensions/`
-3. 开启右上角的"开发者模式"
-4. 点击"加载已解压的扩展"
-5. 选择项目文件夹
+2. 打开浏览器（Chrome或Edge）
+3. 进入扩展管理页面：
+   - Chrome: `chrome://extensions/`
+   - Edge: `edge://extensions/`
+4. 开启右上角的"开发者模式"
+5. 点击"加载已解压的扩展程序"（Chrome）或"加载已解压的扩展"（Edge）
+6. 选择项目文件夹
 
 ## 使用说明
 
@@ -76,7 +71,7 @@ WordTracer Pro是一个Chrome浏览器扩展，专为CS专业人士和学生设�
 
 - HTML5 + CSS3
 - JavaScript
-- Chrome Extension API
+- 浏览器扩展API
 - 有道/百度翻译API
 
 ## 项目结构
