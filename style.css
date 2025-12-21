@@ -1,0 +1,138 @@
+/**
+ * WordTracer Pro - 插件样式表 V2.1
+ * 适配：深色模式、长标题截断、多行翻译换行
+ */
+
+/* 1. 查词弹窗主容器 */
+#word-tracer-popup {
+  position: absolute;
+  background: linear-gradient(135deg, #ffffff 0%, #fff9e6 100%); /* 明亮渐变背景 */
+  color: #333333;
+  padding: 15px 20px;
+  border-radius: 16px;
+  border: 2px solid #ff7eb3; /* 粉色边框，更青春活力 */
+  z-index: 2147483647; /* 确保在所有网页元素之上 */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 12px;
+  box-shadow: 0 8px 30px rgba(255, 126, 179, 0.3); /* 粉色阴影，增强活力 */
+  
+  /* 布局适配：增加宽度以容纳长句，限制高度并允许滚动 */
+  max-width: 400px;
+  min-width: 250px;
+  max-height: 400px;
+  overflow-y: auto;
+  line-height: 1.6;
+  pointer-events: auto; /* 确保弹窗内点击有效 */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 2. 头部区域：单词、音标与发音按钮 */
+.header { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0; 
+  margin-bottom: 8px; 
+  padding-bottom: 5px; 
+}
+
+/* 单词标题：增加长标题适配 */
+.title { 
+  color: #ff69b4; /* 鲜艳的粉色标题，更具青春活力 */
+  font-weight: bold; 
+  font-size: 16px;
+  /* 完整显示标题，支持换行 */
+  display: inline-block;
+  max-width: 100%; 
+  white-space: normal;
+  overflow: visible;
+  vertical-align: bottom;
+  word-break: break-word;
+}
+
+/* 音标样式 */
+.phonetic {
+  color: #ff8c00; /* 温暖的橙色音标，增强活力 */
+  font-style: italic;
+  font-size: 13px;
+  margin: 6px 0;
+  opacity: 1;
+  transition: color 0.3s ease;
+}
+
+/* 发音按钮 */
+.speak-btn { 
+  background: none; 
+  border: none; 
+  cursor: pointer; 
+  color: #ff7eb3; /* 粉色按钮 */
+  font-size: 20px;
+  padding: 4px 8px;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+.speak-btn:hover { 
+  color: #ff69b4; /* 更深的粉色 */
+  background-color: rgba(255, 105, 180, 0.15);
+  transform: scale(1.2);
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.2);
+}
+
+/* 3. 内容区域：专业标签与翻译正文 */
+
+/* CS专业词汇高亮标签 */
+.cs-tag { 
+  color: #ff6b6b; 
+  background: rgba(255, 107, 107, 0.1); 
+  padding: 3px 8px; 
+  border-radius: 4px; 
+  margin-bottom: 8px; 
+  font-size: 12px; 
+  font-weight: 600; 
+  display: inline-block; 
+  border: 1px solid rgba(255, 107, 107, 0.3); 
+  transition: all 0.3s ease;
+}
+
+.cs-tag:hover { 
+  background: rgba(255, 107, 107, 0.2); 
+  transform: translateY(-1px); 
+}
+
+/* 翻译正文：支持多行换行与长单词断行 */
+.trans-body { 
+  color: #6b7280; 
+  white-space: pre-line; /* 识别后台传来的 \n 换行符 */
+  word-break: break-word; /* 强制长单词换行，防止撑破容器 */
+  font-size: 13px; 
+  line-height: 1.6;
+}
+
+/* 4. 底部统计区域 */
+.footer-stats { 
+  color: #6b7280; 
+  font-size: 11px; 
+  margin-top: 12px; 
+  border-top: 1px solid #e5e7eb; 
+  padding-top: 8px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 5. 功能性样式 */
+
+/* 全文高亮样式：黄色背景 */
+.wt-highlight { 
+  background-color: #ffeb3b !important; 
+  color: #000 !important; 
+  border-radius: 2px; 
+}
+
+/* 滚动条美化（Webkit内核浏览器） */
+#word-tracer-popup::-webkit-scrollbar { width: 4px; }
+#word-tracer-popup::-webkit-scrollbar-thumb { 
+  background: #333; 
+  border-radius: 10px; 
+}
+#word-tracer-popup::-webkit-scrollbar-thumb:hover { background: #007acc; }
